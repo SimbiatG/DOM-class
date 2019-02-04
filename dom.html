@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src = "./dom.js"> </script>
+
+
+<!-- 
+<button id = "some-btn"> Click me </button>
+<script type = "application/javascript">
+(function (){
+  console.log(document.getElementById("some-btn").innerHTML)
+})()
+</script>
+ -->
+[
+		<div>
+			<h3> Display Buttons </h3>
+				<button id="firstButton" style="height: 50px;"> first button</button>
+		</div>
+
+		<div>
+			<a href=""> My link </a>
+		</div>
+
+			<!-- <script type="text/javascript">
+				(function () {
+					console.log(document.getElementsByTagName("div"))
+				}) ();
+			</script> -->
+			<script type="text/javascript">
+				(function () {
+					var myDiv = document.getElementsByTagName("div")[1]
+					for (var i = 1; i <= 10; i++){
+						var button = document.createElement("button")
+					
+					button.innerHTML ="myButtons"+i
+					myDiv.appendChild(button)
+					var a = document.createElement("a")
+					
+					a.innerHTML ="myLinks"+i
+					myDiv.appendChild(a)
+					}
+				}) ();
+			</script>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+<script src = "./file.js"></script>
+	alert('hello world') -->
+	
