@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> axios example </title>
+</head>
+<body>
+		<h2 id="man"> info </h2>
+		<button id="toFetch"> Check data  </button>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript">
+			(function(){
+				document.getElementById('toFetch')
+				.addEventListener("click", function(){
+					axios.get('https://swapi.co/api/people/1')
+					.then(function(result){
+						var name = result.data.name
+						document.getElementById('man').innerHTML = name
+					
+					.catch(function(error){
+						console.error(error)
+					})
+				})
+				
+			  })
+			})()
+
+
+		</script>
+
+
+
+
+</body>
+</html>
